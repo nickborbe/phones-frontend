@@ -17,10 +17,10 @@ export class AuthService {
           {
             signUpUsername: componentInfo.username,
             signUpPassword: componentInfo.password
-          },
+          }
 
           // Send the cookies across domains
-          { withCredentials: true }
+          // { withCredentials: true }
         )
 
         // Convert from observable to promise

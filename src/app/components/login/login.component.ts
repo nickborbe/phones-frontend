@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
           // clear the error message
           this.loginErrorMessage = "";
 
-          // redirect to /camels
+          // redirect to /phones
           this.myRouter.navigate(['/phones']);
       })
       .catch((err) => {
