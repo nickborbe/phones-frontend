@@ -9,6 +9,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { AuthService } from './services/auth.service';
 import { PhoneService } from "./services/phone.service";
 import { EnterDetailsGuardService } from "./services/enter-details-guard.service";
+import { LeaveAddPhoneGuardService } from "./services/leave-add-phone-guard.service";
 
 // routes
 import { AppRoutingModule } from "./app-routing.module";
@@ -37,7 +38,7 @@ import { FileUploadModule } from "ng2-file-upload";
     AppRoutingModule,
     FileUploadModule
   ],
-  providers: [AuthService, PhoneService, EnterDetailsGuardService],
+  providers: [AuthService, PhoneService, EnterDetailsGuardService, LeaveAddPhoneGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

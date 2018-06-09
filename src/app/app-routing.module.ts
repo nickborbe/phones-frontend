@@ -6,6 +6,7 @@ import { PhonesComponent } from "./components/phones/phones.component";
 import { PhoneDetailsComponent } from "./components/phone-details/phone-details.component";
 import { NewPhoneComponent } from "./components/new-phone/new-phone.component";
 import { EnterDetailsGuardService } from "./services/enter-details-guard.service";
+import { LeaveAddPhoneGuardService } from "./services/leave-add-phone-guard.service";
 
 const routes: Routes = [
   {
@@ -28,7 +29,8 @@ const routes: Routes = [
   },
   {
     path: "add-phone",
-    component: NewPhoneComponent
+    component: NewPhoneComponent,
+    canDeactivate: [ LeaveAddPhoneGuardService ]
   }
 ];
 
