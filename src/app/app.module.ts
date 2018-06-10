@@ -10,6 +10,7 @@ import { AuthService } from './services/auth.service';
 import { PhoneService } from "./services/phone.service";
 import { EnterDetailsGuardService } from "./services/enter-details-guard.service";
 import { LeaveAddPhoneGuardService } from "./services/leave-add-phone-guard.service";
+// import { ResolveDetailsGuardService } from "./services/resolve-details-guard.service";
 
 // routes
 import { AppRoutingModule } from "./app-routing.module";
@@ -38,7 +39,12 @@ import { FileUploadModule } from "ng2-file-upload";
     AppRoutingModule,
     FileUploadModule
   ],
-  providers: [AuthService, PhoneService, EnterDetailsGuardService, LeaveAddPhoneGuardService],
+  providers: [AuthService,
+              PhoneService,
+              EnterDetailsGuardService,
+              LeaveAddPhoneGuardService,
+              // ResolveDetailsGuardService
+            ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

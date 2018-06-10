@@ -48,13 +48,20 @@ export class PhoneDetailsComponent implements OnInit {
         console.log(err);
         this.myRouter.navigate(["/"]);
       });
+      // this.myRoute.data.subscribe((resolved) => {
+      //   this.phone = resolved['phone'];
+      // });
     this.myRoute.params.subscribe(params => {
       this.getPhoneDetails(params["id"]);
     });
   }
   // getting one phone and its details
   getPhoneDetails(id) {
-    this.myPhoneService.getId(id).then(thePhoneDetails => {
+    this.myPhoneService.getId(id)
+    // .subscribe(thePhoneDetails => {
+    //   this.phone = thePhoneDetails;
+    // })
+    .then(thePhoneDetails => {
       this.phone = thePhoneDetails;
     });
   }
