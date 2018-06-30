@@ -39,6 +39,17 @@ export class NewPhoneComponent implements OnInit {
        });
   }
 
+  isFormClean(): boolean {
+    if (this.phoneData.phoneBrand !== '') {
+      return window.confirm(`
+          Unsaved changes.
+          Are you sure you want to leave?
+      `);
+    }
+
+    return true;
+  }
+
   saveNewPhone() {
     if (this.myCoolUploader.getNotUploadedItems().length === 0) {
       this.savePhoneNoImage();

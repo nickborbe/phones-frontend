@@ -5,6 +5,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { PhonesComponent } from "./components/phones/phones.component";
 import { PhoneDetailsComponent } from "./components/phone-details/phone-details.component";
 import { NewPhoneComponent } from "./components/new-phone/new-phone.component";
+import { EnterDetailsGuardService } from "./services/enter-details-guard.service";
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
   },
   {
     path: "phones/:id",
-    component: PhoneDetailsComponent
+    component: PhoneDetailsComponent,
+    canActivate: [ EnterDetailsGuardService ]
   },
   {
     path: "add-phone",
